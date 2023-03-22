@@ -28,3 +28,6 @@ constraint id_mochilita foreign key (id_mochilita) references backpack(mochila_i
 constraint id_objeto foreign key (id_objeto) references objectt(objeto_id))
 
 select * from backpack;
+select * from objectt;
+select * from personage;
+select * from backpack_object;

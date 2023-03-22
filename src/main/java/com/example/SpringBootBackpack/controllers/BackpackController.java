@@ -47,7 +47,7 @@ public class BackpackController {
         String nombre = backpack.getNombre();
         int capacidad = backpack.getCapacidad();
         String color = backpack.getColor();
-        String sql = MessageFormat.format("insert into backpack(nombre, capacidad, color) values (\'{0}\', {1}, \'{2}\')", nombre, capacidad, color);
+        String sql = "insert into backpack(nombre, capacidad, color) values ('" + nombre + "', " + capacidad + ", '" + color + "')";
         jdbcTemplate.execute(sql);
         System.out.println("Registered backpack.");
         return ResponseEntity.ok().build();
@@ -66,9 +66,9 @@ public class BackpackController {
         String nombre = backpack.getNombre();
         int capacidad = backpack.getCapacidad();
         String color = backpack.getColor();
-        String sql1 = MessageFormat.format("update backpack set nombre = '{0}' where mochila_id = {1}", nombre, backpack.getMochila_id());
-        String sql2 = MessageFormat.format("update backpack set capacidad = {0} where mochila_id = {1}", capacidad, backpack.getMochila_id());
-        String sql3 = MessageFormat.format("update backpack set color = '{0}' where mochila_id = {1}", color, backpack.getMochila_id());
+        String sql1 = "update backpack set nombre = '" + nombre + "' where mochila_id = " + backpack.getMochila_id();
+        String sql2 = "update backpack set capacidad = " + capacidad + " where mochila_id = " + backpack.getMochila_id();
+        String sql3 = "update backpack set color = '" + color + "' where mochila_id = " + backpack.getMochila_id();
         jdbcTemplate.execute(sql1);
         jdbcTemplate.execute(sql2);
         jdbcTemplate.execute(sql3);

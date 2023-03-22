@@ -18,7 +18,7 @@ create table objectt(
 objeto_id int primary key identity (1,1),
 nombre varchar(245),
 tipo varchar(100),
-costo float)
+costo money)
 
 create table backpack_object(
 mochila_objeto_id int primary key identity (1,1),

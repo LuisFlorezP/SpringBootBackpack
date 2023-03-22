@@ -47,7 +47,7 @@ public class BackpackController {
         String nombre = backpack.getNombre();
         int capacidad = backpack.getCapacidad();
         String color = backpack.getColor();
-        String sql = MessageFormat.format("insert into backpack(nombre, capacidad, color) values ('{0}', {1}, '{2}')", nombre, capacidad, color);
+        String sql = MessageFormat.format("insert into backpack(nombre, capacidad, color) values (\'{0}\', {1}, \'{2}\')", nombre, capacidad, color);
         jdbcTemplate.execute(sql);
         System.out.println("Registered backpack.");
         return ResponseEntity.ok().build();

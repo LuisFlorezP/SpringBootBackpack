@@ -68,8 +68,8 @@ public class ObjecttController {
         String tipo = objectt.getTipo();
         float costo = objectt.getCosto();
         String sql1 = "update objectt set nombre = '" + nombre + "' where objeto_id = " + objectt.getObjeto_id();
-        String sql2 = "update objectt set tipo = " + tipo + " where objeto_id = " + objectt.getObjeto_id();
-        String sql3 = "update objectt set costo = '" + costo + "' where objeto_id = " + objectt.getObjeto_id();
+        String sql2 = "update objectt set tipo = '" + tipo + "' where objeto_id = " + objectt.getObjeto_id();
+        String sql3 = "update objectt set costo = " + costo + " where objeto_id = " + objectt.getObjeto_id();
         jdbcTemplate.execute(sql1);
         jdbcTemplate.execute(sql2);
         jdbcTemplate.execute(sql3);

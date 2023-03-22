@@ -27,4 +27,4 @@ id_objeto int,
 constraint id_mochilita foreign key (id_mochilita) references backpack(mochila_id),
 constraint id_objeto foreign key (id_objeto) references objectt(objeto_id))
 
-select * from userOne;
+select * from backpack;

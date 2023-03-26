@@ -9,17 +9,17 @@ public class BackpackObject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long mochila_objeto_id;
-    @Column(name = "id_mochila")
-    private int id_mochila;
+    @Column(name = "id_mochilita")
+    private int id_mochilita;
     @Column(name = "id_objeto")
     private int id_objeto;
 
     public BackpackObject() {
     }
 
-    public BackpackObject(Long mochila_objeto_id, int id_mochila, int id_objeto) {
+    public BackpackObject(Long mochila_objeto_id, int id_mochilita, int id_objeto) {
         this.mochila_objeto_id = mochila_objeto_id;
-        this.id_mochila = id_mochila;
+        this.id_mochilita = id_mochilita;
         this.id_objeto = id_objeto;
     }
 
@@ -31,12 +31,12 @@ public class BackpackObject {
         this.mochila_objeto_id = mochila_objeto_id;
     }
 
-    public int getId_mochila() {
-        return id_mochila;
+    public int getId_mochilita() {
+        return id_mochilita;
     }
 
-    public void setId_mochila(int id_mochila) {
-        this.id_mochila = id_mochila;
+    public void setId_mochila(int id_mochilita) {
+        this.id_mochilita = id_mochilita;
     }
 
     public int getId_objeto() {
@@ -51,7 +51,7 @@ public class BackpackObject {
     public String toString() {
         return "BackpackObject{" +
                 "mochila_objeto_id=" + mochila_objeto_id +
-                ", id_mochila=" + id_mochila +
+                ", id_mochila=" + id_mochilita +
                 ", id_objeto=" + id_objeto +
                 '}';
     }

@@ -35,7 +35,7 @@ public class BackpackObject {
         return id_mochilita;
     }
 
-    public void setId_mochila(int id_mochilita) {
+    public void setId_mochilita(int id_mochilita) {
         this.id_mochilita = id_mochilita;
     }
 
